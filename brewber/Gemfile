@@ -2,9 +2,10 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.1'
-# Use postgresql as the database for Active Record
-gem 'pg'
+gem 'rails', '4.2.5'
+gem 'json'
+# Use mysql as the database for Active Record
+gem 'mysql2', '>= 0.3.13', '< 0.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -24,31 +25,23 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+# gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'devise'
 group :development, :test do
-
-  gem 'pry'
-
-  gem 'pry-rails'           # Causes rails console to open pry
-                          # https://github.com/rweng/pry-rails
-  gem 'pry-byebug'          # Adds step, next, finish, and continue commands and breakpoints
-                          # https://github.com/nixme/pry-debugger
-  gem 'pry-stack_explorer'  # Navigate the call-stack
-                          # https://github.com/pry/pry-stack_explorer
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+end
 
+group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
