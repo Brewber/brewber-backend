@@ -10,16 +10,14 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 #
 
-creds = JSON.parse(File.read("CREDS.secret.json"))
-
 default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
   port: 3306
-  username: creds['username']
-  password: creds['password']
-  host: creds['server-ip']
+  username: root
+  password: "Idaman2016"
+  host: 192.241.179.242
   socket: /tmp/mysql.sock
 
 development:
