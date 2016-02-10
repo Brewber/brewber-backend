@@ -16,8 +16,8 @@ default: &default
   pool: 5
   port: 3306
   username: root
-  password: "Idaman2016"
-  host: 192.241.179.242
+  password: ""
+  host: 127.0.0.1
   socket: /tmp/mysql.sock
 
 development:
